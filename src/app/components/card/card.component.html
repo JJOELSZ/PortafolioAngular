@@ -1,0 +1,17 @@
+
+  <mat-card class="example-card">
+    <div class="card-content">
+      <mat-card-header>
+        <mat-card-title>{{proyect.title}}</mat-card-title>
+        <mat-card-subtitle>{{proyect.subtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{proyect.description}}</p>
+      </mat-card-content>
+      <mat-card-actions class="gap-2">
+        <button mat-raised-button color="primary" (click)="openModal()">Ver demo</button>
+        <button mat-raised-button (click)="goto(proyect.link)">Visitar sitio</button>
+      </mat-card-actions>
+    </div>
+       <img src="http://placeimg.com/400/400/any" alt="picture" width="200">
+  </mat-card>

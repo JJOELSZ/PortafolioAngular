@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.navbar {
+  display: absolute;
+  z-index: 990;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.5rem;
+  box-shadow: 0 0 20px #ccc;
+}
+.container-menu {
+  display: flex;
+  gap: 1rem;
+}
+.logo {
+  font-family: 'Lobster', cursive;
+  letter-spacing: .3rem;
+  font-size: 2.5rem;
+}
+.mover {
+  font-size: 2rem;
+}
+.active {
+  animation: move 5s linear infinite;
+}
+input {
+  cursor: pointer;
+}
+button {
+  font-size: 1.7rem;
+}
+
+button > i {
+  transition: transform 0.5s linear;
+  font-size: 2.5rem;
+  display: block;
+}
+button:hover > i {
+  transform: rotate(360deg);
+}
+.btn-hamburger {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 5rem;
+  }
+  .logo {
+    letter-spacing: .2rem;
+    font-size: 2rem;
+  }
+  //MENU
+  .btn-hamburger {
+    display: block;
+  }
+  .container-menu {
+    position: absolute;
+    right: -100%;
+    top: 5rem;
+    bottom: 0;
+    height: calc(100vh - 10rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f5f5f5;
+    transition: right .5s linear;
+    color:#3f51b5;
+  }
+  
+  .show {
+    right: 0;
+  }
+  
+}
+
+
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

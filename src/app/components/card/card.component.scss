@@ -1,0 +1,38 @@
+.example-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 95%;
+  width: 90rem;
+
+  padding: 1rem 1rem 1rem 0;
+}
+
+.card-content {
+  max-width: 60rem;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 872px) {
+  .example-card {
+    justify-content: unset;
+  }
+  .card-content {
+    max-width: unset;
+  }
+  img {
+    display: none;
+  }
+}
+p {
+  text-align: justify;
+  font-size: 1.7rem;
+}

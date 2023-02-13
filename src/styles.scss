@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+p {
+  line-height: 2.5rem;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.home-photo {
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+  animation: right_to_left 1s linear;
+}
+
+@keyframes left_to_right {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes right_to_left {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}

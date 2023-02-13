@@ -1,0 +1,8 @@
+<div class="container-proyects">
+  <div class="cards">
+    <app-card *ngFor="let proyect of proyects" [proyect]="proyect" (openModalEvent)="open($event)"></app-card>
+  </div>
+  <div *ngIf="showModal" class="modal">
+    <app-modal (closeModalEvent)="close($event)"></app-modal>
+  </div>
+</div>

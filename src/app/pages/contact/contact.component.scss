@@ -1,0 +1,47 @@
+.container-contact {
+  width: 100%;
+  height: calc(100vh - 13rem);
+  margin-top: 6.5rem;
+  display: flex;
+  justify-content: center;
+
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+.example-form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  animation: left_to_right 1s linear;
+}
+h2 {
+  align-self: flex-start;
+}
+.buttonSubmit{
+  display: block;
+  margin: 0 auto;
+}
+.width_input {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container-contact {
+    margin-top: 5rem;
+    height: calc(100vh - 10rem);
+  }
+  .contact {
+    justify-content: center;
+    padding: 2rem 0;
+    max-width: 95%;
+  }
+  img {
+    display: none;
+  }
+}

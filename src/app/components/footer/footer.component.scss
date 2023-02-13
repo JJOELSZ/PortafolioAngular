@@ -1,0 +1,19 @@
+.container-footer{
+  position: fixed ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6.5rem;
+  text-align: center;
+  box-shadow: 0 0 20px #ccc;
+  z-index: 980;
+}
+button {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 792px) {
+  .container-footer{
+    height: 5rem;
+  }
+}

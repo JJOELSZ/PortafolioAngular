@@ -1,0 +1,49 @@
+<mat-toolbar [color]="theme" class="navbar">
+  <span class="logo">JoelSZ</span>
+  <span class="example-spacer"></span>
+  <div class="container-menu show" [ngClass]="{ show : showMenu}">
+    <button
+      *ngFor="let item of menu"
+      mat-button
+      [routerLink]="item.path"
+      (click)="move(item)"
+      [ngClass]="{ active: item.active }"
+    >
+      {{ item.name }}
+    </button>
+  </div>
+  <span class="example-spacer"></span>
+  <div class="form-check form-switch">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      id="flexSwitchCheckChecked"
+      [(ngModel)]="option"
+      checked
+      (click)="changeTheme()"
+    />
+  </div>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+    (click)="goto('https://www.linkedin.com/in/joel-soto-zegarra-74aa52236')"
+  >
+    <i class="bi bi-linkedin"></i>
+  </button>
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+    (click)="goto('https://github.com/JJOELSZ')"
+  >
+    <i class="bi bi-github"></i>
+  </button>
+  <button
+    class="btn-hamburger"
+    mat-icon-button
+    (click)="toogleMenu()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
